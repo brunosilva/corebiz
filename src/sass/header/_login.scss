@@ -1,0 +1,252 @@
+.header{
+    .topo{
+        .d-none{
+            display: none;
+        }
+        .control-login-options{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 848;
+            background: rgba(0, 0, 0, 0.75);
+            display: none;
+            align-items: center;
+
+            @media screen and (max-width:767px) {
+                justify-content: center;
+            }
+
+            .form-login{
+                z-index: 99;
+                width: 450px;
+                position: absolute;
+                background-color: $light-gray;
+                border: 1px solid darken($color: $light-gray, $amount: 20%);
+                right: 50px;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+
+                @media screen and (max-width:767px) {
+                    width: calc(100vw - 5%);
+                    height: calc(100vh - 5%);
+                    right: auto;
+                }
+
+                .title{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 7px 10px;
+                    color: $v2-dark;
+                    font-size: 14px;
+                    border-bottom: 1px solid darken($color: $light-gray, $amount: 5%);
+                    font-weight: 600;
+
+                    a{
+                        color: $v2-dark;
+                    }
+                }
+
+                form{
+                    padding: 7px 10px;
+
+                    .form-group{
+                        label{
+                            margin-bottom: 0;
+                            font-size: 14px;
+                        }
+
+                        .input-login{
+                            border-radius: 0px;
+                            border-top: 0px solid transparent;
+                            border-left: 0px solid transparent;
+                            border-right: 0px solid transparent;
+                            outline: thin !important;
+                        }
+                    }
+
+                    .btn-primary{
+                        @include create-buttom($light-green, $white);
+                        margin-top: 10px;
+                    }
+                }
+
+                .helpers-login{
+                    height: calc(90vh - 326px);
+                    position: relative;
+                    padding: 7px 10px;
+
+                    .links {
+                        width: 100%;
+                        bottom: 0;
+                        position: absolute;
+                    }
+                }
+            }
+
+            .options-login{
+                z-index: 99;
+                width: 450px;
+                position: absolute;
+                background-color: $light-gray;
+                border: 1px solid darken($color: $light-gray, $amount: 20%);
+                right: 50px;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+
+                @media screen and (max-width:767px) {
+                    width: calc(100vw - 5%);
+                    height: calc(100vh - 10%);
+                    right: auto;
+                }
+
+                .title{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 7px 10px;
+                    color: $v2-dark;
+                    font-size: 14px;
+                    border-bottom: 1px solid darken($color: $light-gray, $amount: 5%);
+                    font-weight: 600;
+
+                    a{
+                        color: $v2-dark;
+                    }
+                }
+
+                .user-account{
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    border-bottom: 1px solid darken($color: $light-gray, $amount: 5%);
+
+                    .avatar {
+                        background-color: $white;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 28px;
+                        margin: 0 auto;
+                        position: relative;
+
+                        .edit-img-user{
+                            position: absolute;
+                            font-size: 16px;
+                            top: 0px;
+                            right: -10px;
+                            color: $light-green;
+                            cursor: pointer;
+
+                            &:hover{
+                                color: darken($color: $light-green, $amount: 7%);
+                            }
+                        }
+                    }
+
+                    .info-user{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .send-address{
+                    margin: 20px 60px;
+                    padding: 10px 60px;
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+                    background-color: lighten($color: $light-gray, $amount: 2%);
+                    border: 1px solid darken($color: $light-gray, $amount: 5%);
+                    border-radius: 4px;
+
+                    &:hover{
+                        background-color: lighten($color: $light-gray, $amount: 5%);
+                        border: 1px solid darken($color: $light-gray, $amount: 7%);
+                    }
+
+                    div{
+                        display: flex;
+
+                        .img{
+                            width: 30px;
+                            font-size: 22px;
+                            margin-right: 5px;
+                            display: flex;
+                            align-items: center;
+                        }
+    
+                        .info-address{
+                            display: flex;
+                            flex-direction: column;
+    
+                            small{
+                                font-size: 12px;
+                                color: rgb(70, 58, 58);
+                                line-height: 12px;
+                            }
+    
+                            strong{
+                                font-size: 13px;
+                                font-weight: 600;
+                                color: #000;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            
+
+            // @media screen and (max-width:767px) {
+            //     width: calc(100vw - 5%);
+            //     height: calc(100vh - 5%);
+            //     right: auto;
+            // }
+
+            
+            // @media screen and (max-width:767px) {
+            //     left: calc(100vw - 50%);
+            // }
+
+            ul{
+                padding: 0;
+                list-style: none;
+                margin: 0;
+                height: calc(100vh - 224px);
+                overflow-y: auto;
+                
+                //Monta scrollbar (background e cor da barra)
+                @include scrollbar($white, $scrollbar);
+
+                li{
+                    padding: 12px 18px;
+
+                    &:hover{
+                        background-color: darken($color: $light-gray, $amount: 10%);
+                    }
+
+                    a{
+                        color: $v2-dark;
+                        text-decoration: none;
+
+                        .fas {
+                            margin-right: 10px;
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+}

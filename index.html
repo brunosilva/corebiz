@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel=stylesheet href="node_modules/hamburger-menu/dist/hamburger-menu.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/header.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/checkout.css">
+
+    <title>Store</title>
+</head>
+
+<body>
+    <!--INICIO - Header -->
+    <header class="header">
+
+        <!--INICIO - Barra com menu hamburguer(mobile), logo e links de acesso e mini-cart -->
+        <div class="topo">
+            <div class="container">
+                <div class="logo">
+                    <a href="jvascript:void(0)" class="itens-control hamburguer-menu"><i class="fas fa-bars fa-2x"></i></a>
+                    <img src="assets/images/logo.png" class="img-responsive">
+                    <div class="control-mobile">
+                        <a href="jvascript:void(0)" class="itens-control btn-checkout"><i class="fas fa-shopping-cart"></i> <span
+                                class="quantity">0</span></a>
+                    </div>
+                </div>
+                <div class="controls">
+                    <div class="search itens-control">
+                        <input type="text" name="search" class="input-search" placeholder="O que está procurando?" />
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <a href="jvascript:void(0)" class="itens-control btn-login"><i class="far fa-user"></i> Minha Conta</a>
+                    <a href="jvascript:void(0)" class="itens-control btn-checkout"><i class="fas fa-shopping-cart"></i> <span
+                            class="quantity">0</span></a>
+                </div>
+                <div class="control-login-options">
+                    <div class="options-login dnone">
+                        <div class="title">
+                            <span>Área do Cliente</span>
+                            <a href="javascript:void(0)" class="btn-close">[fechar]</a>
+                        </div>
+                        <div class="user-account">
+                            <div class="avatar">
+                                <i class="far fa-user"></i>
+                                <i class="fas fa-edit edit-img-user" alt="alterar imagem" title="alterar imagem"></i>
+                            </div>
+                            <div class="info-user">
+                                <strong class="name">Bruno Silva</strong>
+                                
+                            </div>
+                        </div>
+                        <div class="send-address">
+                            <div>
+                                <div class="img">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-address">
+                                    <small>Enviar para Bruno</small>
+                                    <strong>Rua xyz, 00</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><a href="javascript:void(0)"><i class="fas fa-user-cog"></i> Meus Dados</a></li>
+                            <li><a href="javascript:void(0)"><i class="fas fa-map-marked"></i> Meus Endereços</a></li>
+                            <li><a href="javascript:void(0)"><i class="fas fa-lock"></i> Alterar Senha</a></li>
+                            <li><a href="javascript:void(0)"><i class="fas fa-dollar-sign"></i> Minhas Compras</a></li>
+                            <li><a href="javascript:void(0)"><i class="fas fa-heart"></i> Favoritos</a></li>
+                            <li><a href="javascript:void(0)"><i class="fas fa-question"></i> Perguntas</a></li>
+                            <li><a href="javascript:void(0)"><i class="fas fa-shield-alt"></i> Segurança</a></li>
+                            <li><a href="javascript:void(0)"><i class="fas fa-door-open"></i> Sair</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="form-login">
+                        <div class="title">
+                            <span>Área do Cliente</span>
+                            <a href="javascript:void(0)" class="btn-close">[fechar]</a>
+                        </div>
+                        <form>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Email</label>
+                              <input type="email" class="form-control input-login" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input type="password" class="form-control input-login" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group esqueci-senha">
+                                <a href="javascript:void(0)">Esqueci minha senha</a>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">Salvar senha</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                        </form>
+                        <div class="helpers-login">
+                            <div class="links">
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        Preciso de ajuda
+                                    </p>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        Fale conosco
+                                    </p>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        Politica de privacidade
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="mini-cart-overlay" id="miniCartOverlay">
+                    <div class="mini-cart">
+                        <div class="title">
+                            <span>Carrinho (0)</span>
+                            <a href="javascript:void(0)" class="btn-close">[fechar]</a>
+                        </div>
+                        <div class="product-list">
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <div class="img">
+                                    <img src="assets/images/img-produto.jpg" class="img-responsive">
+                                </div>
+                                <div class="infos">
+                                    <strong>Produto 01</strong>
+                                    <small>Quantidade: 01 - Tamanho M</small>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa fa-times" alt="remover" title="remover"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="totalization">
+                            <div class="shipping">
+                                <input type="text" class="input-shipping" placeholder="informe seu CEP aqui!">
+                                <a href="javascript:void(0)" class="btn-shipping">Calcular</a>
+                            </div>
+                            <div class="total-shipping">
+                                <span>Frete</span>
+                                <span>R$ 19,90</span>
+                            </div>
+                            <div class="total-value">
+                                <span>Total</span>
+                                <span>R$ 190,90</span>
+                            </div>
+                            <div class="finish">
+                                <a href="javascript:void(0)">Finalizar Pagamento</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!--FIM - Barra com menu hamburguer(mobile), logo e links de acesso e mini-cart -->
+        <!--INICIO - Barra com navbar -->
+        <!-- <nav class="nav">
+            <div class="container">
+                <ul>
+                    <li class="l1"><a href="javascript:void(0)">Item 1</a></li>
+                    <li class="l1"><a href="javascript:void(0)">Item 2</a></li>
+                    <li class="l1"><a href="javascript:void(0)">Item 3</a></li>
+                    <li class="l1 l2"><a href="javascript:void(0)">Item 4</a>
+                        <ul class="sub1">
+                            <li class="l1"><a href="javascript:void(0)">Item 4.1</a></li>
+                            <li class="l1"><a href="javascript:void(0)">Item 4.2</a></li>
+                            <li class="l1"><a href="javascript:void(0)">Item 4.3</a></li>
+                        </ul>
+                    </li>
+                    <li class="l1"><a href="javascript:void(0)">Item 5</a></li>
+                    <li class="l1"><a href="javascript:void(0)">Item 6</a></li>
+                    <li class="l1"><a href="javascript:void(0)">Item 7</a></li>
+                    <li class="l1"><a href="javascript:void(0)">Item 8</a></li>
+                    <li class="l1"><a href="javascript:void(0)">Item 9</a></li>
+                    <li class="l1"><a href="javascript:void(0)">Item 10</a></li>
+                    <li class="l1"><a href="javascript:void(0)">Item 11</a></li>
+                    <li class="l1 l2"><a href="javascript:void(0)">Item 12</a>
+                        <ul class="sub1">
+                            <li class="l1"><a href="javascript:void(0)">Item 12.1</a></li>
+                            <li class="l1"><a href="javascript:void(0)">Item 12.2</a></li>
+                            <li class="l1"><a href="javascript:void(0)">Item 12.3</a></li>
+                            <li class="l1"><a href="javascript:void(0)">Item 12.4</a></li>
+                            <li class="l1"><a href="javascript:void(0)">Item 12.5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav> -->
+        <!--FIM - Barra com navbar -->
+    </header>
+    <!--FIM - Header -->
+
+    <!--INICIO - Full-banner -->
+    <section>
+
+    </section>
+    <!--FIM - Full-banner -->
+
+    <!--INICIO - Product-list -->
+    <section>
+
+    </section>
+    <!--FIM - Product-list -->
+
+    <!--INICIO - Newsletter -->
+    <section>
+
+    </section>
+    <!--FIM - Newsletter -->
+
+    <!--INICIO - Footer -->
+    <footer>
+
+    </footer>
+    <!--FIM - Footer -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3/dist/jquery.min.js"></script>
+    <script src="node_modules/hamburger-menu/dist/hamburger-menu.js"></script>
+    <script src="src/js/header.js"></script>
+
+</body>
+
+</html>

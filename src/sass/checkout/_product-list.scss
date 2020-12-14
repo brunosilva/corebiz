@@ -1,0 +1,54 @@
+.product-list{
+    display: flex;
+    flex-direction: column;
+    margin: 7px 0;
+    height: calc(100% - 250px);
+    overflow-y: auto;
+    padding: 7px 10px;
+
+    @media screen and (max-width:767px) {
+        height: calc(100% - 250px);
+    }
+
+    
+    //Monta scrollbar (background e cor da barra)
+    @include scrollbar($white, $scrollbar);
+
+    .product{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 7px;
+        margin-bottom: 7px;
+        border-bottom: 1px solid darken($color: $light-gray, $amount: 5%);
+
+        .img{
+            width: 50px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .infos{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0 0 0 10px;
+
+            strong{
+                font-weight: 600;
+            }
+        }
+
+        .remove{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: darken($color: $light-gray, $amount: 25%);
+
+            &:hover{
+                color: darken($color: $light-gray, $amount: 50%);
+            }
+        }
+    }
+}

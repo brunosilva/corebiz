@@ -1,0 +1,86 @@
+.header{
+    
+
+    .comunication{
+        font-size: 14px;
+        color: $dark-silver;
+        background-color: $light-gray;
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+
+            @media screen and (max-width:767px) {
+                flex-direction: column;
+            }
+
+            .contact{       
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span{
+                    padding: 0 20px 0 0;
+                }
+
+                @media screen and (max-width:767px) {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    span{
+                        padding: 3px 0;
+                    }
+                }
+            }
+
+            .social{
+                display: flex;
+                height: 40px;
+
+                @media screen and (max-width:767px) {
+                    display: none !important;
+                }
+
+                .media{
+                    width: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &.facebook{
+                        &:hover{
+                            @include media-social($facebook);
+                        }   
+                    }
+                    &.twitter{
+                        &:hover{
+                            @include media-social($twitter);
+                        }   
+                    }
+                    &.linkedin{
+                        &:hover{
+                            @include media-social($linkedin);
+                        }   
+                    }
+                    &.instagram{
+                        &:hover{
+                            @include media-social($instagram);
+                        }   
+                    }
+                    &.whatsapp{
+                        &:hover{
+                            @include media-social($whatsapp);
+                        }   
+                    }
+                }
+
+                @media screen and (max-width:768px) {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
