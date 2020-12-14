@@ -1,75 +1,45 @@
-.nav{
-    border-bottom: 1px solid $light-gray;
-    @media screen and (max-width:767px) {
-        display: none;
-    }
+.newsletter{
+    background-color: $background-newsletter;
+
     .container{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
+        padding: 24px 0 36px;
 
-    ul{
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-        flex-wrap: wrap;
-        margin-bottom: 0;
-
-        .l1{
-            cursor: pointer;
+        .title-newsletter{
+            font-size: 22px;
+            text-align: center;
+            color: $dark-title;
+            font-weight: 700;
+            margin-bottom: 16px;
         }
 
-        li{
-            padding: 10px 20px;
-            position: relative;
+        .newsletter-field{
+            form.form-inline{
+                width: 100%;
+                display: flex;
+                justify-content: center;
 
-            &:hover, &:active{
-                background-color: $light-green;
-                a{
-                    color: $white;
-                }
-            }
-            
-            a{
-                color: $dark-silver;
-                text-decoration: none;
-            }
-
-            &.l2{
-                overflow: hidden;
-
-                &:hover{
-                    overflow: visible;
-
-                    .sub1{
-                        transform: translateY(0);
+                input{
+                    width: 280px;
+                    margin: 0 4px;
+                    font-size: 12px;
+                    padding: 17px 16px;
+                    font-weight: 700;
+                    
+                    @media only screen and (max-width:768px) {
+                        width: 100%;
+                        margin: 15px 16px 0;
                     }
                 }
 
-                .sub1{
-                    z-index: 1;
-                    min-width: 150px;
-                    position: absolute;
-                    background-color: $v2-dark;
-                    margin-top: 10px;
-                    left: 0;
-                    transform: translateY(10%);
-                    transition: all .75s;
+                button{
+                    width: 140px;
+                    margin: 0 4px;
+                    font-size: 14px;
+                    font-weight: 700;
 
-                    li{
-                        padding: 10px 20px;
+                    @media only screen and (max-width:768px) {
                         width: 100%;
-                        
-                        &:hover{
-                            background-color: darken($color: $v2-dark, $amount: 5%);
-                            transition: 0.3s;
-                        }
-                        
-                        a{
-                            color: $white;
-                        }
+                        margin: 7px 16px 0;
                     }
                 }
             }

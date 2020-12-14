@@ -34,6 +34,20 @@ module.exports = {
         dist: `${paths.dist}/${paths.css}`,
         filename: 'checkout.css' 
       }
+    },
+    newsletter: {
+      scss: {
+        src: `${paths.src}/${paths.scss}/newsletter/module.scss`,
+        dist: `${paths.dist}/${paths.css}`,
+        filename: 'newsletter.css' 
+      }
+    },
+    footer: {
+      scss: {
+        src: `${paths.src}/${paths.scss}/footer/module.scss`,
+        dist: `${paths.dist}/${paths.css}`,
+        filename: 'footer.css' 
+      }
     }
   },
   clonePathsAndFiles: [

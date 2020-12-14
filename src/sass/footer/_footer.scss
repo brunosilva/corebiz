@@ -1,0 +1,20 @@
+.footer{
+    background-color: $black;
+
+    .container{
+        padding: 25px 0;
+
+        //font-size, color, margin-bottom, background-bar
+        @include title-pattern(20px, $white, 16px, $white);
+
+        .address{
+            margin-top: 20px;
+
+            p{
+                margin-bottom: 4px;
+                color: $white;
+                font-size: 13px;
+            }
+        }
+    }
+}
