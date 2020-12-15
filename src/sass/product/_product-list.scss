@@ -71,6 +71,61 @@
 }
 
 .fullbanner{
-    background-color: $black;
-    color: $white;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    background: url(../../assets/images/fullbanner.png) no-repeat;
+    background-size: 100%;
+    height: 438px;
+
+    @media only screen and (max-width:768px) {
+        background: url(../../assets/images/fullbanner-mobile.png) no-repeat;
+        background-size: 100%;
+        height: 225px;
+    }
+    .container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .texto{
+            h3{
+                font-size: 30px;
+                color: $white;
+                font-weight: 700;
+                line-height: 40.92px;
+
+                @media only screen and (max-width:768px) {
+                    font-size: 20px;
+                    color: $white;
+                    font-weight: 700;
+                    line-height: 20px;
+                    width: 250px;
+                    margin-bottom: 0;
+                }
+            }
+
+            h2{
+                font-size: 45px;
+                color: $white;
+                font-weight: 900;
+                line-height: 40.92px;
+                width: 414px;
+                display: flex;
+                flex-wrap: wrap;
+
+                @media only screen and (max-width:768px) {
+                    font-size: 30px;
+                    color: $white;
+                    font-weight: 900;
+                    line-height: 30px;
+                    width: 290px;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+
 }
