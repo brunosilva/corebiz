@@ -3,17 +3,106 @@
 
     .container{
         padding: 25px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        //font-size, color, margin-bottom, background-bar
-        @include title-pattern(20px, $white, 16px, $white);
+        @media only screen and (max-width:768px) {
+            width: 100%;
+            flex-direction: column;
+        }
+        
+        .location{
+            //font-size, color, margin-bottom, background-bar
+            @include title-pattern(20px, $white, 16px, $white);
+    
+            .address{
+                margin-top: 20px;
+    
+                p{
+                    margin-bottom: 4px;
+                    color: $white;
+                    font-size: 13px;
+                }
+            }
 
-        .address{
-            margin-top: 20px;
+            @media only screen and (max-width:768px) {
+                width: 100%;
+                padding: 0 16px;
+                margin-bottom: 30px;
+            }
+        }
 
-            p{
-                margin-bottom: 4px;
-                color: $white;
-                font-size: 13px;
+        .contact{
+            display: flex;
+            flex-direction: column;
+
+            .email{
+                margin-bottom: 25px;
+            }
+
+            a{
+                width: 215px;
+                background-color: $white;
+                padding: 13px 17px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                
+                &:hover{
+                    text-decoration: none;
+                }
+
+                i{
+                    margin-right: 18px;
+                    font-size: 15px;
+                }
+
+                span{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 12px;
+                    line-height: 13px;
+                }
+
+                i, span{
+                    color: $black;
+                }
+            }
+
+            @media only screen and (max-width:768px) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .developers{
+            display: flex;
+
+            .created{
+                a{
+                    display: flex;
+                    flex-direction: column;
+
+                    span{
+                        font-size: 10.6px;
+                        color: $white;
+                    }
+                }
+            }
+
+            .powered{
+                margin-left: 25px;
+
+                a{
+                    display: flex;
+                    flex-direction: column;
+
+                    span{
+                        font-size: 10.6px;
+                        color: $white;
+                    }
+                }
             }
         }
     }

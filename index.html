@@ -9,12 +9,16 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
     <link rel=stylesheet href="node_modules/hamburger-menu/dist/hamburger-menu.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="assets/css/header.css">
     <link rel="stylesheet" type="text/css" href="assets/css/checkout.css">
     <link rel="stylesheet" type="text/css" href="assets/css/newsletter.css">
     <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/product.css">
 
     <title>Store</title>
 </head>
@@ -350,14 +354,26 @@
     <!--FIM - Header -->
 
     <!--INICIO - Full-banner -->
-    <section>
-
+    <section class="fullbanner">
+        <div class="container">
+            fullbanner
+        </div>
+        <img src="assets/images/fullbanner.png">
     </section>
     <!--FIM - Full-banner -->
 
     <!--INICIO - Product-list -->
-    <section>
+    <section class="product-list">
+        <div class="container">
+            <div class="title-pattern">
+                <h3>Mais vendidos</h3>
+                <div class="bar"></div>
+            </div>
 
+            <div class="product-list">
+                <div class="carousel" id="product"></div>
+            </div>
+        </div>
     </section>
     <!--FIM - Product-list -->
 
@@ -391,6 +407,30 @@
                     <p>+55 11 3090 1039</p>
                 </div>
             </div>
+            <div class="contact">
+                <a href="javascript:void(0)" class="email">
+                    <i class="fas fa-envelope"></i> <span>ENTRE EM CONTATO</span>
+                </a>
+
+                <a href="javascript:void(0)" class="consultor">
+                    <i class="fas fa-headset"></i>
+                    <span>FALE COM O NOSSO CONSULTOR ONLINE</span>
+                </a>
+            </div>
+            <div class="developers">
+                <div class="created">
+                    <a href="https://www.corebiz.ag/" target="blank" title="corebiz">
+                        <span>created by</span>
+                        <img src="assets/images/corebiz.svg" alt="logo corebiz">
+                    </a>
+                </div>
+                <div class="powered">
+                    <a href="https://vtex.com/br-pt/" target="blank" title="VTEX">
+                        <span>Powered by</span>
+                        <img src="assets/images/vtex.svg" alt="logo vtex">
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
     <!--FIM - Footer -->
@@ -404,9 +444,43 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3/dist/jquery.min.js"></script>
-    <script src="node_modules/hamburger-menu/dist/hamburger-menu.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
     <script src="src/js/header.js"></script>
+    <script src="src/js/product.js"></script>
 
+    <script>
+        $('.carousel').slick({
+          dots: true,
+          infinite: false,
+          arrows: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        dots: true,
+                        arrows: true,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        dots: true,
+                        arrows: true,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
+      </script>
 </body>
 
 </html>

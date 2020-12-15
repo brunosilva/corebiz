@@ -48,6 +48,13 @@ module.exports = {
         dist: `${paths.dist}/${paths.css}`,
         filename: 'footer.css' 
       }
+    },
+    productList: {
+      scss: {
+        src: `${paths.src}/${paths.scss}/product/module.scss`,
+        dist: `${paths.dist}/${paths.css}`,
+        filename: 'product.css' 
+      }
     }
   },
   clonePathsAndFiles: [
