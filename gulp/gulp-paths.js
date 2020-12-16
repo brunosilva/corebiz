@@ -21,7 +21,13 @@ module.exports = {
     //     filename: 'main.css' 
     //   }
     // },
-    header: {
+    main: {
+      scss: {
+        src: `${paths.src}/${paths.scss}/main.scss`,
+        dist: `${paths.dist}/${paths.css}`,
+        filename: 'main.css' 
+      }
+    },header: {
       scss: {
         src: `${paths.src}/${paths.scss}/header/module.scss`,
         dist: `${paths.dist}/${paths.css}`,

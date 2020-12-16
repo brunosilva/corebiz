@@ -8,6 +8,9 @@
             display: flex;
 
             .col-md-3{
+                display: flex;
+                justify-content: center;
+
                 .card {
                     border: 1px solid $white;
                     width: 216px;
@@ -46,7 +49,7 @@
                                 line-height: 25px;
                                 text-align: center;
                                 color: $black;
-                                margin-bottom: 0;
+                                margin-bottom: 8px;
                             }
 
                             button{
@@ -76,7 +79,7 @@
     position: relative;
     background: url(../../assets/images/fullbanner.png) no-repeat;
     background-size: 100%;
-    height: 438px;
+    height: 425px;
 
     @media only screen and (max-width:768px) {
         background: url(../../assets/images/fullbanner-mobile.png) no-repeat;
@@ -89,7 +92,7 @@
         align-items: center;
         height: 100%;
 
-        .texto{
+        .texto{           
             h3{
                 font-size: 30px;
                 color: $white;
