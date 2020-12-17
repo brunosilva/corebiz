@@ -61,6 +61,13 @@ module.exports = {
         dist: `${paths.dist}/${paths.css}`,
         filename: 'product.css' 
       }
+    },
+    home: {
+      scss: {
+        src: `${paths.src}/${paths.scss}/home/module.scss`,
+        dist: `${paths.dist}/${paths.css}`,
+        filename: 'home.css' 
+      }
     }
   },
   clonePathsAndFiles: [

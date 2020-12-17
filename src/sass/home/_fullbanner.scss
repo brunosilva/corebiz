@@ -1,0 +1,118 @@
+
+.fullbanner{
+    .carousel{
+        .carousel-inner.desktop{
+            display: block;
+            @media only screen and (max-width:768px) {
+                display: none;
+            }
+
+            .carousel-item{
+                height: 430px;
+                display: flex;
+                align-items: center;
+
+                img{
+                    position: absolute;
+                }
+                .texto{
+                    position: relative;
+                    margin-left: 200px;
+                    
+                    h3{
+                        font-size: 30px;
+                        color: $white;
+                        font-weight: 700;
+                        line-height: 40.92px;
+        
+                        @media only screen and (max-width:768px) {
+                            font-size: 20px;
+                            color: $white;
+                            font-weight: 700;
+                            line-height: 20px;
+                            width: 250px;
+                            margin-bottom: 0;
+                        }
+                    }
+        
+                    h2{
+                        font-size: 45px;
+                        color: $white;
+                        font-weight: 900;
+                        line-height: 40.92px;
+                        width: 414px;
+                        display: flex;
+                        flex-wrap: wrap;
+        
+                        @media only screen and (max-width:768px) {
+                            font-size: 30px;
+                            color: $white;
+                            font-weight: 900;
+                            line-height: 30px;
+                            width: 290px;
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+                    }
+                }
+            }
+        }
+
+        .carousel-inner.mobile{
+            display: none;
+            @media only screen and (max-width:768px) {
+                display: block;
+
+                .carousel-item{
+                    height: 193px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img{
+                        position: absolute;
+                    }
+                    .texto {
+                        position: relative;
+
+                        h3{
+                            font-size: 30px;
+                            color: $white;
+                            font-weight: 700;
+                            line-height: 40.92px;
+            
+                            @media only screen and (max-width:768px) {
+                                font-size: 20px;
+                                color: $white;
+                                font-weight: 700;
+                                line-height: 20px;
+                                width: 250px;
+                                margin-bottom: 0;
+                            }
+                        }
+            
+                        h2{
+                            font-size: 45px;
+                            color: $white;
+                            font-weight: 900;
+                            line-height: 40.92px;
+                            width: 414px;
+                            display: flex;
+                            flex-wrap: wrap;
+            
+                            @media only screen and (max-width:768px) {
+                                font-size: 30px;
+                                color: $white;
+                                font-weight: 900;
+                                line-height: 30px;
+                                width: 290px;
+                                display: flex;
+                                flex-wrap: wrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -73,19 +73,17 @@
             }
 
             .search {
-                width: 700px;
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
 
                 .input-search {
-                    width: 90%;
                     border: 0px solid transparent;
                     border-bottom: 1px solid $border-search;
                     padding: 10px 5px;
                 }
 
-                @media screen and (max-width:767px) {
+                @media screen and (max-width:768px) {
                     width: 100%;
                     margin: 10px 0 0 0;
 

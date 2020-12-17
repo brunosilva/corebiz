@@ -11,19 +11,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
-    <link rel=stylesheet href="node_modules/hamburger-menu/dist/hamburger-menu.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="assets/css/header.css">
     <link rel="stylesheet" type="text/css" href="assets/css/checkout.css">
     <link rel="stylesheet" type="text/css" href="assets/css/newsletter.css">
     <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
     <link rel="stylesheet" type="text/css" href="assets/css/product.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/home.css">
 
     <title>Store</title>
+
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -358,12 +367,73 @@
 
     <!--INICIO - Full-banner -->
     <section class="fullbanner">
-        <div class="container">
-            <div class="texto">
-                <h3>Olá, o que você está buscando?</h3>
-                <h2>Criar ou migrar seu e-commerce?</h2>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner desktop">
+                <div class="carousel-item active">
+                    <img src="assets/images/fullbanner.png" alt="Los Angeles" width="1100" height="500">
+                    <div class="texto">
+                        <h3>Olá, o que você está buscando?</h3>
+                        <h2>Criar ou migrar seu e-commerce?</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/fullbanner.png" alt="Chicago" width="1100" height="500">
+                    <div class="texto">
+                        <h3>Olá, o que você está buscando?</h3>
+                        <h2>Criar ou migrar seu e-commerce?</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/fullbanner.png" alt="New York" width="1100" height="500">
+                    <div class="texto">
+                        <h3>Olá, o que você está buscando?</h3>
+                        <h2>Criar ou migrar seu e-commerce?</h2>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <div class="carousel-inner mobile">
+                <div class="carousel-item active">
+                    <img src="assets/images/fullbanner-mobile.png" alt="Los Angeles" width="1100" height="500">
+                    <div class="texto">
+                        <h3>Olá, o que você está buscando?</h3>
+                        <h2>Criar ou migrar seu e-commerce?</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/fullbanner-mobile.png" alt="Chicago" width="1100" height="500">
+                    <div class="texto">
+                        <h3>Olá, o que você está buscando?</h3>
+                        <h2>Criar ou migrar seu e-commerce?</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/fullbanner-mobile.png" alt="New York" width="1100" height="500">
+                    <div class="texto">
+                        <h3>Olá, o que você está buscando?</h3>
+                        <h2>Criar ou migrar seu e-commerce?</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+
     </section>
     <!--FIM - Full-banner -->
 
@@ -387,10 +457,10 @@
         <div class="container">
             <h3 class="title-newsletter">Participe de nossas news com promoções e novidades!</h3>
             <div class="newsletter-field">
-                <form class="form-inline">
-                    <input type="text" class="form-control" placeholder="Digite seu nome">
-                    <input type="text" class="form-control" placeholder="Digite seu e-mail">
-                    <button type="submit" class="btn btn-dark">Eu quero!</button>
+                <form method="post" action="https://corebiz-test.herokuapp.com/api/v1/newsletter" class="form-inline" id="formNewsletter" name="formNewsletter">
+                    <input type="text" name="name" class="form-control" placeholder="Digite seu nome">
+                    <input type="text" name="email" class="form-control" placeholder="Digite seu e-mail">
+                    <button type="submit" class="btn btn-dark" onclick="placeOrder()">Eu quero!</button>
                 </form>
             </div>
         </div>
@@ -440,23 +510,31 @@
     </footer>
     <!--FIM - Footer -->
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+
     <script src="src/js/header.js"></script>
     <script src="src/js/product.js"></script>
 
     <script>
+
+    $(document).ready(function() {
+
+        $('#formNewsletter').submit(function(){
+            $.ajax({
+            url: $('#formNewsletter').attr('action'),
+            type: 'POST',
+            data : $('#formNewsletter').serialize(),
+            success: function(){
+                console.log('success.');
+            }
+            });
+            return false;
+        });
+
         $('.carousel').slick({
           dots: true,
-          infinite: false,
+          infinite: true,
           arrows: true,
           slidesToShow: 4,
           slidesToScroll: 1,
@@ -469,6 +547,8 @@
                         dots: true,
                         arrows: true,
                         centerMode: true,
+                        autoplay: true,
+                        autoplaySpeed: 2000,
                         centerPadding: '40px',
                         slidesToShow: 2
                     }
@@ -479,12 +559,17 @@
                         dots: true,
                         arrows: true,
                         centerMode: true,
+                        autoplay: true,
+                        autoplaySpeed: 2000,
                         centerPadding: '40px',
                         slidesToShow: 2
                     }
                 }
             ]
         });
+     });
+        
+        
       </script>
 </body>
 
